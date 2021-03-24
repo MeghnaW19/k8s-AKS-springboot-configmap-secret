@@ -1,0 +1,14 @@
+#Create a deployment by using the image pushed to Docker Hub
+#Use containerPort 8081
+#While creating the deployment, get the values from ConfigMap and Secret and follow the below instructions
+#Use the name as MYSQL_URL for the key to be accessed from ConfigMap, which is used in the SpringBoot application
+#Use the names as follows MYSQL_USERNAME - username, MYSQL_PASSWORD - password for the values access from secret
+apiVersion: apps/v1
+
+---
+#Create the service of type LoadBalancer and use the above created deployment as selector
+#Use port 8081
+
+apiVersion: v1
+
+
